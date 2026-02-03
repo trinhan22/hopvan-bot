@@ -1,3 +1,12 @@
+// --- QUAN TRỌNG: ĐOẠN NÀY ĐỂ RENDER KHÔNG TẮT BOT ---
+const http = require('http');
+const server = http.createServer((req, res) => {
+    res.writeHead(200);
+    res.end('Bot Hopvan dang hoat dong!');
+});
+server.listen(process.env.PORT || 3000);
+// ----------------------------------------------------
+
 require('dotenv').config();
 const { Client, GatewayIntentBits, ActivityType, EmbedBuilder } = require('discord.js');
 
